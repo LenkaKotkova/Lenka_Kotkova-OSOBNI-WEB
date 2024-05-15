@@ -1,0 +1,251 @@
+/* intuitivnější box-sizing pro všechny prvky na stránce */
+html { box-sizing: border-box; }
+*, ::before, ::after { box-sizing: inherit; }
+
+/* 
+Barevná paleta:
+
+Barevna paletu s fialovou a levandulovou barvou:
+
+Primární barva: #7C69D7 (Fialová)
+Akcentní barva: #E5D8FF (Levandulová)
+Textová barva: #333333 (Černá)
+Pozadí: #F7F7F7 (Světle šedá)
+
+Akcentní barvy:
+#C5A5F5 (Světle fialová)
+#D3B2FF (Světle levandulová)
+
+Primární odkazy:
+#4B3799 (Tmavě fialová)
+#6958B3 (Tmavě levandulová)
+
+Pozadí v hlavičce:
+#4B3799 (Tmavě fialová)
+
+Typografie:
+
+Písmo Open Sans, které je čitelné pro seniory:
+
+Nadpisy 1: 32px, #7C69D7
+Nadpisy 2: 24px, #7C69D7
+Nadpisy 3: 20px, #333333
+Odstavce: 16px, #333333
+
+Předběžné Rozvržení:
+
+Šířka stránky: 1200px
+Okraje: 20px
+Mezi elementy: 10px
+Nadpisy: Zarovnáno doleva
+Odstavce: Odsazení vlevo a vpravo
+*/
+
+:root {
+
+    /* barva Fialová */
+    --primary: #7C69D7; /* Fialová */
+    --primary-dark: #3F296B; /* Tmavě fialová */
+    --primary-light: #E5D8FF; /* Levandulová */
+
+    /* barva Akcentní */
+    --accent: #C5A5F5; /* Světle fialová */
+    --accent-hover: #D3B2FF; /* Světle levandulová */
+
+    /* barva Text */
+    --text: #333333; /* Černá */
+    --text-light: #fff; /* Bílá */
+
+    /* Barva Pozadí */
+    --background-base: #F7F7F7; /* Světle šedá */
+    --primary-superlight: #f3eefd; /* Levandulová */
+    --primary-light: #E5D8FF; /* Levandulová */
+    --primary-dark: #3F296B; /* Tmavě fialová */
+
+	--font-default: 'Open Sans', sans-serif;
+	--font-special: 'Montserrat', sans-serif;
+
+	--spacer: 1rem;
+	--spacer-quarter: calc(var(--spacer) / 4);
+	--spacer-half: calc(var(--spacer) / 2);
+	--spacer-bigger: calc(var(--spacer) * 1.5);
+	--spacer-double: calc(var(--spacer) * 2);
+}
+
+body {
+    margin: 0;
+    font-family: "Open Sans", sans-serif;
+    background-color: var(--background-base);
+}
+
+.wrapper {
+    max-width: 66rem;
+    margin: 0 auto;
+    background-color: var(--primary-superlight);
+}
+
+h1, 
+h2, 
+h3 {
+    font-family: var(--font-default);
+    font-weight: normal;
+}
+
+h1 { font-size: 2rem; }
+h2 { font-size: 1.5rem; }
+h3 { font-size: 1.2rem; }
+
+:is(h1, h2, h3):first-child {
+	margin-top: 0;
+}
+
+/*
+------------------
+Header
+------------------
+*/
+.header__contact {
+	padding: var(--spacer-half) var(--spacer-bigger);
+	font-size: 14px;
+	text-align: right;
+	background-color: var(--primary-dark);
+	color: var(--text-light);
+}
+
+.header__contact-email {
+	margin-right: var(--spacer);
+}
+
+.header__contact a {
+	color: var(--text-light);
+}
+
+.header__contact a:hover,
+.header__contact a:focus {
+	color: var(--accent);
+}
+
+.header__inner {
+    padding: var(--spacer) var(--spacer-bigger);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.header__logo {
+    font-family: var(--font-special);
+    font-size: 36px;
+    font-weight: bold;
+    flex: 0 0 100%;
+    margin-bottom: var(--spacer-half);
+}
+
+.header__activity {
+    font-family: var(--font-special);
+    color: var(--primary-dark) ;
+    height: 1em;
+    width: auto;
+    margin-right: var(--spacer-half);
+    vertical-align: baseline;
+}
+
+.header__image {
+    min-height: 300px;
+    background: url(./../images/Sykovec_podzim.jpg) no-repeat right center/cover;
+}
+
+.header__image_obyc {
+    min-height: 200px;
+    background: url(./../images/Sykovec_podzim.jpg) no-repeat right center/cover;
+    position: relative;
+}
+
+.Lenka {
+    width: 150px;
+    border-radius: 50%;
+    border: 1px solid var(--primary-dark);
+    position: absolute;
+    right: 10px;
+    bottom: -85px;
+}
+
+/*
+------------------
+Menu
+------------------
+*/
+
+.menu__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.menu__item {
+    margin: 0;
+    padding: 0;
+}
+
+.menu__item:not(:last-child) {
+    border-right: 1px solid var(--primary);
+}
+
+.menu__link {
+    display: block;
+    padding: var(--spacer-half) var(--spacer);
+    font-family: var(--font-special);
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--text);
+}
+
+.menu__link:hover {
+    background-color: var(--accent);
+}
+
+/*
+------------------
+footer
+------------------
+*/
+
+.footer a {
+    color: var(--text-light);
+}
+
+.footer a:hover,
+.footer a:focus {
+    color: var(--accent);
+}
+
+.footer__grid {
+    padding: var(--spacer-double) var(--spacer-bigger);
+    background-color: var(--primary-dark);
+    color: var(--text-light);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacer-bigger);
+}
+
+.footer__links {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.footer__links li:not(:last-child) {
+    margin-bottom: var(--spacer-quarter);
+}
+
+.footer__title {
+    color: var(--accent);
+}
+
+.footer__copyright {
+    padding: var(--spacer) var(--spacer-bigger);
+    font-size: 14px;
+    text-align: left;
+    background-color: var(--background-base);
+}
