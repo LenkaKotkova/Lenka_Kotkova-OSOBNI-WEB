@@ -340,15 +340,36 @@ Rozvrh
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(4, auto);
     gap: 3px;
+
+}
+
+.timetable__time {
+    color: var(--primary-dark);
+}
+
+.timetable__day {
+    color: var(--primary-dark);
+    font-weight: bold;
+}
+
+.timetable__lesson {
+    background-color: var(--accent);
+    border: 1px solid var(--accent);
+    border-radius: var(--spacer-half);
+    text-align: center;
 }
 
 .timetable li {
-    border: 1px solid var(--primary);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    place-content: center;
 }
 
+.timetable a {
+    color: var(--text);
+    text-decoration: none;
+    text-transform: uppercase;
+    cursor: pointer;
+}
 /*
 ------------------
 footer
