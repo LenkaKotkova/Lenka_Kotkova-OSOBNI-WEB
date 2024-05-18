@@ -239,12 +239,43 @@ Tlačítko
 
 /*
 ------------------
+Drobečková navigace
+------------------
+*/
+
+.breadcrumb {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.breadcrumb li {
+    margin: 0 5px 0 5px; 
+}
+
+.breadcrumb li a {
+    text-decoration: none;
+    color: var(--primary-dark);
+}
+
+.breadcrumb li a:hover {
+    color: var(--accent-hover);
+}
+
+.breadcrumb li:last-child a {
+  font-weight: bold;
+}
+
+/*
+------------------
 Upoutávka na akci
 ------------------
 */
 
 .action {
     display: grid;
+    background-color: white;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto 1fr;
     gap:var(--spacer);
@@ -285,7 +316,6 @@ Můj příběh
 */
 
 .about {
-    box-shadow: inset 0 0 30px var( --primary);
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: var(--spacer-bigger);
@@ -310,11 +340,11 @@ Hodnocení klientů - testimonial
     margin-bottom: var(--spacer-bigger);
 }
 
-.testimonial__bubble :first-child {
+.testimonial__bubble:first-child {
     margin-top: 0;
 }
 
-.testimonial__bubble :last-child {
+.testimonial__bubble:last-child {
     margin-bottom: 0;
 }
 
@@ -334,42 +364,104 @@ Hodnocení klientů - testimonial
 Rozvrh
 ------------------
 */
+.table {
+    background-color: white;
+}
+
 .timetable {
     list-style: none;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(4, auto);
-    gap: 3px;
-
-}
-
-.timetable__time {
-    color: var(--primary-dark);
-}
+    grid-template-columns: 80px repeat(4, 1fr);
+    grid-template-rows: repeat(3, auto);
+    gap: var(--spacer-half);
+    padding-left: 0px;
+ }
 
 .timetable__day {
     color: var(--primary-dark);
     font-weight: bold;
+    grid-template-rows: auto;
+    place-content: center start;
 }
 
 .timetable__lesson {
     background-color: var(--accent);
     border: 1px solid var(--accent);
     border-radius: var(--spacer-half);
+    place-content: center;
     text-align: center;
 }
 
 .timetable li {
     display: grid;
-    place-content: center;
 }
 
-.timetable a {
+.timetable__lesson a {
     color: var(--text);
     text-decoration: none;
     text-transform: uppercase;
     cursor: pointer;
 }
+
+/*
+------------------
+Rozvrh - foto
+------------------
+*/
+.about__side-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    border-radius: var(--spacer-half);
+    
+}
+
+/*
+------------------
+Kontakt
+------------------
+*/
+.kontakt {
+    display: grid;
+    background-color: white;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto 1fr;
+}
+
+.kontakt__title {
+    grid-column: span 3;
+}
+
+.kontakt__content {
+    grid-column: span 2;
+}
+
+.map {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacer-bigger);
+}
+
+.map__content {
+    grid-column: span 2;
+}
+.map__content iframe {
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+}
+
+.address__bubble {
+    /*padding: var(--spacer-half);*/
+    position: relative;
+    border-bottom: 1px solid var(--primary-dark);
+    padding-top: 10px;
+}
+
+.address__bubble:last-child {
+   border-bottom: 0;
+}
+
 /*
 ------------------
 footer

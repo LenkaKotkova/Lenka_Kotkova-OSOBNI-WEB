@@ -2,39 +2,62 @@
 layout: /layouts/sablona_obyc.njk
 title: Lekce tance
 ---
+<!--drobečková navigace-->
+<nav aria-label="Breadcrumb navigation" >
+    <ol class="breadcrumb">
+      <li class="breadcrump__item"><a href="/">Domů</a></li>
+      <li>-</li>
+      <li class="breadcrump__item"><a href="/tanec/">Lekce tance</a></li>    
+    </ol>
+  </nav>
+
 
 <!--Rozvrh tance-->
-<section>
+<section class="table">
     <h1>Přehled pravidelných lekcí tance</h1>
     <ul class="timetable">
-
-        <li class="timetable__time"></li>
-        <li class="timetable__time">10:00 - 11:00</li>
-        <li class="timetable__time">11:00 - 12:00</li>
-        <li class="timetable__time">13:00 - 14:00</li>
-        <li class="timetable__time">14:00 - 15:00</li>
-
+                
         <li class="timetable__day">Pondělí</li>
-        <li class="timetable__lesson">
-            <a href="https://www.stabilstudio.cz/fit-dance">Country tance</a> 
+        <li class="timetable__lesson">10:00 - 11:00<br>
+            <a href="https://www.stabilstudio.cz/fit-dance" class="timetable__lesson-link">Country tance</a> 
             <br> KD Rubín
         </li>
-        <li class="timetable__lesson">
+        <li class="timetable__lesson">11:00 - 12:00<br>
             <a href="#">Tanec pro všechny 60+</a><br> KD Rubín</li>
         <li></li>
         <li></li>
 
         <li class="timetable__day">Úterý</li>
         <li></li>
-        <li class="timetable__lesson"><a href="#">Tancem ke spokojenému tělu</a> <br> KáVéEska</li>
+        <li class="timetable__lesson">11:00 - 12:00<br>
+            <a href="#">Tancem ke spokojenému tělu</a> <br> KáVéEska</li>
         <li></li>
         <li></li>
 
         <li class="timetable__day">Čtvrtek</li>
         <li></li>
         <li></li>
-        <li class="timetable__lesson"><a href="#">Irské tance pro všechny 60+</a> <br> Rubínek</li>
-        <li class="timetable__lesson"><a href="#">Country tance</a><br> Rubínek</li>
+        <li class="timetable__lesson">13:00 - 14:00<br>
+            <a href="#">Irské tance pro všechny 60+</a> <br> Rubínek</li>
+        <li class="timetable__lesson">14:00 - 15:00<br>
+            <a href="#">Country tance</a><br> Rubínek</li>
 
     </ul>
+</section>
+<!--O lekcích tance-->
+<section class="about">
+    <div class="about__content">
+        <h1>Informace k tanci</h1>
+        <p> Kurz je zaměřen konkrétně pro seniory a zájemce, kteří se chtějí seznámit s různými tanečními styly, naučit se rozeznávat jednotlivé taneční rytmy nebo jen rozšířit své obzory v pohybovém vzdělávání. Jednotlivé hodiny jsou koncipovány tak, aby vedly k pozitivnímu ovlivnění a posílení fyzické a emocionální kondice.</p>
+        <p> <b>Hlavní cíle kurzu jsou:</b> osvojení si základních tanečních dovedností, nácvik tanečních variací jednotlivců, párů i skupin, kondiční a koordinační příprava, nácvik správných pohybových stereotypů, porozumění základům hudebně-pohybové nauky a aplikace do praxe. </p>
+        <p><b>Taneční styly, které během kurzu ochutnáme:</b> společenské tance (Blues, Valčík, Waltz, Jive, Chacha, Rumba, Samba), brazilské a karibské tance (Salsa, Bachata, Zouk), klasický tanec, tance jiných národů (Country, irské tance), historické tance (Regency dances).
+        </p>
+    </div>
+
+    <div class="about__side">
+        <div class="about__side-photo">
+            <img src="/images/tanec_01.jpg" alt="Tanec"></div>
+        </div>
+     
+    </div>
 </section>
