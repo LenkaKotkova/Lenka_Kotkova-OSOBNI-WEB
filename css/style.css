@@ -548,6 +548,10 @@ mobilní zobrazení (ano, vím, "mobile first"... ze zkusenosti - mí klienti z 
 */
 
 @media (max-width: 800px) {
+    .wrapper {
+        max-width: 100%;
+
+    }
     
     .menu__checkbox {
         position: absolute;
