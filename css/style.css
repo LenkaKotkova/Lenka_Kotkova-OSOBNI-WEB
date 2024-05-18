@@ -237,6 +237,7 @@ section {
     background-color: white;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1 1fr;
     gap: var(--spacer-bigger);
 }
 
@@ -448,7 +449,14 @@ Pobyty
     grid-column: span 2;
 }
 
+.grid-white .pobyt {
+    grid-column: 2 / 4;  
+}
 
+.grid-white .about__side-photo {
+    grid-column: 1 / 2;
+    grid-row:  1 / 2;
+}
 
 /*
 ------------------
@@ -543,15 +551,16 @@ footer
 
 /*
 ------------------
-mobilní zobrazení (ano, vím, "mobile first"... ze zkusenosti - mí klienti z 50% nemají smartphony)
+mobilní zobrazení (ano, vím, "mobile first"... ze zkusenosti - mí klienti z 50% nemají smartphony, proto jsem raději tvorila "jen" webovky a ano, uz ted vím, že to byla blbost...)
 ------------------
 */
 
 @media (max-width: 800px) {
     .wrapper {
         max-width: 100%;
-
     }
+
+  /*MENU*/  
     
     .menu__checkbox {
         position: absolute;
@@ -580,8 +589,62 @@ mobilní zobrazení (ano, vím, "mobile first"... ze zkusenosti - mí klienti z 
     .menu__checkbox:checked ~ .menu__list {
         display: block;
     }
-}
+
+    /*AKCE - grid*/
+
+    .action {
+        display: block;
+    }
+    .action__content-2 {
+        padding-bottom: var(--spacer-half);
+        padding-top: var(--spacer-half);
+    }
     
+    .about {
+        display: block;
+    }
+
+    /*ROZVRH - grid*/
+
+    .timetable {
+        display: block;
+    }
+
+    .timetable__lesson {
+        margin-bottom: var(--spacer-half);
+    }
+
+    /*POBYTY*/
+
+    .about__side-selfie {
+        display: none;
+    }
+
+    .grid {
+        display: block;
+    }
+
+    .grid-white {
+        display: block;
+    }
+
+    /*KONTAKT*/
+
+    .map {
+        display: block;
+    }
+
+    /*FOOTER*/
+    
+    .footer__grid{
+        display: block;
+    }
+
+    .footer__grid-column {
+        margin-bottom: var(--spacer);
+
+    }
+}
 /*
 ------------------
 tisk
