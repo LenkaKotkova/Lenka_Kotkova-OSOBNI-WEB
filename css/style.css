@@ -152,6 +152,7 @@ Header
 .header__image {
     min-height: 300px;
     background: url(./../images/Sykovec_podzim.jpg) no-repeat right center/cover;
+    position: relative;
 }
 
 .header__image_obyc {
@@ -205,6 +206,17 @@ Menu
     background-color: var(--accent);
 }
 
+.menu-checkbox {
+    display: none;
+}
+
+.menu__toggler {
+    display: none;
+}
+
+.menu__checkbox {
+    display: none;
+}
 /*
 ------------------
 Univerzální grid - 3 sloupce a sekce
@@ -527,4 +539,54 @@ footer
     font-size: 14px;
     text-align: left;
     background-color: var(--background-base);
+}
+
+/*
+------------------
+mobilní zobrazení (ano, vím, "mobile first"... ze zkusenosti - mí klienti z 50% nemají smartphony)
+------------------
+*/
+
+@media (max-width: 800px) {
+    
+    .menu__checkbox {
+        position: absolute;
+        left: auto;
+    }
+
+    .menu__toggler {
+        cursor: pointer;
+        font-size: 18px;
+        font-weight: bold;
+        display: block;
+    }
+
+    .menu__list {
+        background-color: var(--background-base);
+        display: none;
+    }
+
+    .menu__item {
+        border-bottom: 1px solid var(--primary-dark);     
+    }
+
+    .menu__item:not(:last-child) {
+        border-right: none;
+    }
+    .menu__checkbox:checked ~ .menu__list {
+        display: block;
+    }
+}
+    
+/*
+------------------
+tisk
+------------------
+*/
+
+@media print {
+    * {
+        background: none !important;
+        color: black !important;
+    }
 }
