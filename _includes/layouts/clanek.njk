@@ -52,7 +52,7 @@
 
 		<main class="main">
 		<!-- ↑↑↑ odtud nahoru je vrchní část společná pro všechny stránky na webu -->
-
+		<section>
 			<article class="article">
 
 				<h1 class="article__title">{{ title }}</h1>
@@ -62,19 +62,19 @@
 
 					<div class="article__text">
 
-						<p class="article__perex">Tady bude perex</p>
+						<p class="article__perex">{{ perex }}</p>
 
 						{{ content| safe }}
 
 					</div>
 
-					<img class="article__image" src="/images/astronaut.jpg" alt="Astronaut na cizí planetě">
+					<img class="article__image" src="/images/{{ foto }}" alt="{{ alt }}">
 
 				</div>
 
 			</article>
 
-
+		</section>
 		<!-- ↓↓↓ odtud dolů je spodní část společná pro všechny stránky na webu -->
 		</main>
 

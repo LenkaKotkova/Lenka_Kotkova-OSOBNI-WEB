@@ -237,7 +237,7 @@ section {
     background-color: white;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1 1fr;
+    grid-template-rows: 1fr;
     gap: var(--spacer-bigger);
 }
 
@@ -458,6 +458,34 @@ Pobyty
     grid-row:  1 / 2;
 }
 
+ /*Blog*/
+        
+ .article__title  {
+    font-size: 48px;
+    margin: 0;
+}
+
+.article__meta {
+    color: silver;
+}
+
+.article__content {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 50px;
+}
+
+.article__perex {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.article__image {
+    display: block;
+    width: 100%;
+}
+
+
 /*
 ------------------
 Kontakt
@@ -627,34 +655,6 @@ mobilní zobrazení (ano, vím, "mobile first"... ze zkusenosti - mí klienti z 
     .grid-white {
         display: block;
     }
-
-    /*BLOG*/
-        
-    .article__title  {
-        font-size: 48px;
-        margin: 0;
-    }
-    
-    .article__meta {
-        color: silver;
-    }
-    
-    .article__content {
-        display: grid;
-        grid-template-columns: 3fr 2fr;
-        gap: 50px;
-    }
-    
-    .article__perex {
-        font-weight: bold;
-        font-size: 1.2em;
-    }
-    
-    .article__image {
-        display: block;
-        width: 100%;
-    }
-  
 
     /*KONTAKT*/
 
