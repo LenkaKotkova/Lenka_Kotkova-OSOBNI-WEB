@@ -46,15 +46,34 @@
 				</nav>
 			</div>
 
-			<div class="header__image">
-				<img class="Lenka" src="./../images/Lenka_01.jpg" alt="Lenka Kotková">
+			<div class="header__image_obyc">
 			</div>
 		</header>
 
 		<main class="main">
 		<!-- ↑↑↑ odtud nahoru je vrchní část společná pro všechny stránky na webu -->
 
-{{ content | safe }}
+			<article class="article">
+
+				<h1 class="article__title">{{ title }}</h1>
+
+				<p class="article__meta">Publikováno {{ page.date.toLocaleString('cs-CZ') }}</p>
+				<div class="article__content">
+
+					<div class="article__text">
+
+						<p class="article__perex">Tady bude perex</p>
+
+						{{ content| safe }}
+
+					</div>
+
+					<img class="article__image" src="/images/astronaut.jpg" alt="Astronaut na cizí planetě">
+
+				</div>
+
+			</article>
+
 
 		<!-- ↓↓↓ odtud dolů je spodní část společná pro všechny stránky na webu -->
 		</main>
@@ -100,6 +119,6 @@
 		</footer>
 
 
-	</div><!-- wrapper -->
+	</div><!-- .wrapper -->
 </body>
 </html>

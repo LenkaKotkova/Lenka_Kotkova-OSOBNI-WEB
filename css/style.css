@@ -628,6 +628,34 @@ mobilní zobrazení (ano, vím, "mobile first"... ze zkusenosti - mí klienti z 
         display: block;
     }
 
+    /*BLOG*/
+        
+    .article__title  {
+        font-size: 48px;
+        margin: 0;
+    }
+    
+    .article__meta {
+        color: silver;
+    }
+    
+    .article__content {
+        display: grid;
+        grid-template-columns: 3fr 2fr;
+        gap: 50px;
+    }
+    
+    .article__perex {
+        font-weight: bold;
+        font-size: 1.2em;
+    }
+    
+    .article__image {
+        display: block;
+        width: 100%;
+    }
+  
+
     /*KONTAKT*/
 
     .map {
