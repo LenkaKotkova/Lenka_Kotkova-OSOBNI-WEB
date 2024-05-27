@@ -1,0 +1,23 @@
+---
+layout: /layouts/hlavni_sablona.njk
+---
+
+<!-- hlavička stránky -->
+{% include 'partials/header.njk' %}
+
+<!-- menu -->
+{% include 'partials/menu.njk' %}
+
+<!-- menu - obrázek-->
+{% include 'partials/header_image.njk' %}
+
+<main class="main">
+    
+    <!-- zde se vloží obsah šablony a nebo šablona, která používá tuto šablonu -->
+
+{{ content | safe }}
+
+</main>
+
+<!-- vložíme patičku stránky-->
+{% include 'partials/footer.njk' %}

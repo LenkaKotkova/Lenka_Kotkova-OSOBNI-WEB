@@ -1,5 +1,5 @@
 ---
-layout: /layouts/clanek.njk
+layout: layouts/clanek.njk
 title: Váňův statek 2024
 date: 2024-04-05T00:00 
 perex: Hledáte způsob, jak strávit letní prázdniny se svými vnoučaty aktivně a zábavně? 

@@ -1,58 +1,33 @@
+---
+layout: /layouts/hlavni_sablona.njk
+---
 
-<!DOCTYPE html>
-<html lang="cs">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>{{title}}</title>
+<!-- hlavička stránky -->
+{% include 'partials/header.njk' %}
 
-	<!-- Google Fonts: Open Sans a Montserrat -->
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+<!-- menu -->
+{% include 'partials/menu.njk' %}
 
-	<!-- Moje CSS -->
-	<link rel="stylesheet" href="/css/style.css">
-</head>
-<body>
-	<div class="wrapper">
+<!-- menu - obrázek-->
+{% include 'partials/header_image_obyc.njk' %}
 
-		<header class="header">
-			<div class="header__contact">
-				<a class="header__contact-email" href="mailto:lenka.krtecek.kotkova@gmail.com">lenka.krtecek.kotkova@gmail.com</a>
-				<span class="header__contact-phone">Tel. +420 605 961 092</span>
-			</div>
 
-			<div class="header__inner">
-				<div class="header__left">
-					<div class="header__logo">Lenka Kotková</div>
-                    <div class="header__activity">Pohyb pro seniory</div>
-					
-				</div>
+<main class="main">
 
-				<nav class="menu">
-					
-					<input type="checkbox" class="menu__checkbox" id="menu-checkbox">
-					
-					<label for="menu-checkbox" class="menu__toggler"> ☰ Menu</label>
-					
-					<ul class="menu__list">
-						<li class="menu__item"><a href="/" class="menu__link">O mně</a></li>
-						<li class="menu__item"><a href="/cviceni/" class="menu__link">Lekce cvičení</a></li>
-						<li class="menu__item"><a href="/tanec/" class="menu__link">Lekce tance</a></li>
-						<li class="menu__item"><a href="/pobyty/" class="menu__link">Pobyty</a></li>
-						<li class="menu__item"><a href="/blog/" class="menu__link">Blog</a></li>
-						<li class="menu__item"><a href="/kontakt/" class="menu__link">Kontakt</a></li>
-					</ul>
-				</nav>
-			</div>
+			<!--drobečková navigace-->
+		<nav aria-label="Breadcrumb navigation" >
+			<ol class="breadcrumb">
+			<li class="breadcrump__item"><a href="/">Domů</a></li>
+			<li>-</li>
+			<li class="breadcrump__item"><a href="/blog/">Blog</a></li>
+			<li>-</li>
+			<li class="breadcrump__item">Článek</li>    
+			</ol>
+		</nav>
+    
+    <!-- zde se vloží obsah šablony a nebo šablona, která používá tuto šablonu -->
 
-			<div class="header__image_obyc">
-			</div>
-		</header>
-
-		<main class="main">
-		<!-- ↑↑↑ odtud nahoru je vrchní část společná pro všechny stránky na webu -->
-		<section>
+<section>
 			<article class="article">
 
 				<h1 class="article__title">{{ title }}</h1>
@@ -75,50 +50,8 @@
 			</article>
 
 		</section>
-		<!-- ↓↓↓ odtud dolů je spodní část společná pro všechny stránky na webu -->
-		</main>
 
+</main>
 
-		<footer class="footer">
-			<div class="footer__grid">
-				<div class="footer__grid-column">
-					<h2>S kým spolupracuji</h2>
-					<ul class="footer__links">
-						<li><a href="https://www.filianek.cz/">Filiánek, z.s.</a></li>
-						<li><a href="https://www.stabilstudio.cz/">Stabil studio, s.r.o.</a></li>
-						<li><a href="https://kaveeska.cz/vojtova-volnocasove-centrum/nabidka-kurzu-a-aktivit-pro-seniorky-a-seniory/">KáVéEska, p.o.</a></li>
-						<li><a href="https://www.zabovresky.cz/aktivity-pro-seniory-v-roce-2024/ms-21504/p1=21504">MČ Brno - Žabovřesky</a></li>
-					</ul>
-				</div>
-
-				<div class="footer__grid-column">
-					<h2>Mohlo by vás zajímat</h2>
-					<ul class="footer__links">
-						<li><a href="#">Kam se mnou za tancem</a></li>
-						<li><a href="#">Kde si se mnou zacvičit</a></li>
-						<li><a href="#">Kam s námi na pobyt</a></li>
-					</ul>
-				</div>
-
-				<div class="footer__grid-column">
-					<h2>Kontakt</h2>
-					<p>
-						<span class="footer__title">Telefon:</span><br>
-						+420 605 961 092
-					</p>
-					<p>
-						<span class="footer__title">E-mail:</span><br>
-						<a href="mailto:lenka.krtecek.kotkova@gmail.com">lenka.krtecek.kotkova@gmail.com</a>
-					</p>
-				</div>
-			</div>
-
-			<div class="footer__copyright">
-				&copy;2024, Lenka Kotková
-			</div>
-		</footer>
-
-
-	</div><!-- .wrapper -->
-</body>
-</html>
+<!-- vložíme patičku stránky-->
+{% include 'partials/footer.njk' %}

@@ -458,7 +458,11 @@ Pobyty
     grid-row:  1 / 2;
 }
 
- /*Blog*/
+ /*
+------------------
+Blog
+------------------
+*/
         
  .article__title  {
     font-size: 48px;
@@ -485,6 +489,16 @@ Pobyty
     width: 100%;
 }
 
+.post {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: var(--spacer-bigger);
+    margin: var(--spacer) ;
+}
+
+.post__description {
+    width: 100%;
+}
 
 /*
 ------------------

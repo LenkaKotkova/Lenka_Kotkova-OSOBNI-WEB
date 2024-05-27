@@ -1,9 +1,9 @@
 ---
-layout: /layouts/clanek.njk
+layout: layouts/clanek.njk
 title: Pobyty pro aktivní seniory
 date: 2024-04-05T00:00 
 perex: Hledáte způsob, jak si zpestřit rok a strávit čas v příjemné společnosti? 
-foto: Sykovec_duben23.jpg
+foto: Pobyt_podzim_01.jpg
 alt: Cvičíme u Sykovce
 tags:
 - blog

@@ -1,17 +1,17 @@
 ---
-layout: /layouts/clanek.njk
+layout: layouts/clanek.njk
 title: Pobyty pro seniory s PA
 date: 2024-04-05T00:00 
 perex: Nabízíme Vám unikátní pobyty plné aktivit, zábavy a relaxace, které jsou uzpůsobeny potřebám pacientů s Parkinsonovou nemocí. 
-foto: Sykovec_podzim.jpg
-alt: Cvičíme u Sykovce s lahvičkami
+foto: Pobyt_parkinson_Podzim_01.jpg
+alt: Hrajeme deskovky
 tags:
 - blog
 - novinky
 - pobyty
 ---
 
-# Pobyty pro seniory s Parkinsonovou nemocí: Zažijte radost a podporu v krásném prostředí!
+# Zažijte radost a podporu v krásném prostředí!
 
 Přijďte se s námi pobavit, protáhnout a načerpat novou energii v krásném prostředí Vysočiny!
 

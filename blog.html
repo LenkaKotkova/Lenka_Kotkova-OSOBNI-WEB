@@ -1,8 +1,31 @@
 ---
-layout: /layouts/sablona_obyc.njk
+layout: /layouts/stranka_obyc.njk
 title: Blog
 ---
 
-<h1>Blog</h1>
+<!--drobečková navigace-->
+<nav aria-label="Breadcrumb navigation" >
+    <ol class="breadcrumb">
+      <li class="breadcrump__item"><a href="/">Domů</a></li>
+      <li>-</li>
+      <li class="breadcrump__item"><a href="/blog/">Blog</a></li>    
+    </ol>
+</nav>
 
-<p>Tady bude pozdeji seznam clanku.</p>
+<section>
+    <h1>Blog</h1>
+
+{% for prispevek in collections.blog | reverse %}
+
+    <div class="post">
+        <img src="/images/{{ prispevek.data.foto }}" alt="{{ prispevek.data.alt }}">
+
+        <div class="post__description">
+            <h2>{{ prispevek.data.title }}</h2>
+            <p>{{ prispevek.data.perex }}</p>
+            <p><a href="{{ prispevek.url }}">celý článek</a></p>
+        </div>
+    </div>
+</section>
+
+{% endfor %}
