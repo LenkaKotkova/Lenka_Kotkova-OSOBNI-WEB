@@ -13,6 +13,10 @@ layout: /layouts/hlavni_sablona.njk
 
 <main class="main">
     
+    <!--Upotávka na akci-->
+
+    {% include 'partials/action.njk' %}
+
     <!-- zde se vloží obsah šablony a nebo šablona, která používá tuto šablonu -->
 
 {{ content | safe }}

@@ -1,0 +1,39 @@
+<section class="action">
+    <div class="action__title">
+        <h1>Aktuality</h1>
+    </div>
+    <div class="action__content-1">
+        <a class="action__content-a" href="#">
+           <div class="action__bubble">
+                <h3>Mezigenerační tančírna</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, velit veritatis.</p> 
+            </div> 
+        </a>       
+    </div>  
+    <div class="action__content-2">
+
+
+    {% for prispevek in collections.blog | reverse | limit(2) %}
+
+        <div class="post">
+            <a class="action__content-a" href="{{ prispevek.url }}">
+                <div class="post__description action__bubble">
+                    <h2>{{ prispevek.data.title }}</h2>
+                    <p>{{ prispevek.data.perex }}</p>
+                </div>
+            </a>
+        </div>
+
+    {% endfor %}     
+
+
+    </div>  
+    <div class="action__content-3">
+        <a class="action__content-a" href="/pobyty/">
+           <div class="action__bubble">
+                <h3>Pobyt pro seniory s vnoučaty</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, velit veritatis.</p> 
+           </div>
+        </a>      
+    </div>  
+</section>

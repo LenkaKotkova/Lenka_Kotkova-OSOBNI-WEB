@@ -188,6 +188,11 @@ Menu
     padding: 0;
 }
 
+.menu__item--active .menu__link {
+    background-color: var(--accent);
+    color:  ;
+}
+
 .menu__item:not(:last-child) {
     border-right: 1px solid var(--primary);
 }
@@ -293,6 +298,28 @@ Upoutávka na akci
 ------------------
 */
 
+.container {
+    display: flex;
+    flex-direction: row;
+    gap: var(--spacer);
+    position: relative;
+}
+
+.container__article {
+    flex: 1 1 100%;
+    box-sizing: border-box;
+    border-radius: var(--spacer-half);
+    padding: var(--spacer-half);
+    background-color: var(--accent);
+}
+
+.container__article:hover {
+    background-color: var(--accent-hover) ;
+}
+
+.white {
+    background-color: white;
+}
 .action {
     display: grid;
     background-color: white;

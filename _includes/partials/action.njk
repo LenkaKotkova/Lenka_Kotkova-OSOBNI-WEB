@@ -1,0 +1,23 @@
+
+<section class="white">
+
+<h1>Aktuality</h1>
+
+<div class="container">
+
+    {% for prispevek in collections.blog | reverse | limit(3) %}   
+
+        <div class="container__article">
+            <a class="action__content-a" href="{{ prispevek.url }}">
+                <div class="container__article--description">
+                    <h2>{{ prispevek.data.title }}</h2>
+                    <p>{{ prispevek.data.perex }}</p>
+                </div>
+            </a>
+        </div>
+    {% endfor %}
+
+</div>
+
+</section>
+
